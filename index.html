@@ -19,6 +19,9 @@
         // Throw an error if no update is received every 30 seconds
         var options = { timeout: 1000 };
         watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+		
+		
+	
     }
 
     // onSuccess Geolocation
@@ -47,6 +50,8 @@
                         $("#res").html("Coordenadas guardadas");
                 }
         });
+		
+		window.setTimeout('location.reload()', 1000); //reloads after 3 seconds
 }
 
         // onError Callback receives a PositionError object
