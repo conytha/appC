@@ -41,7 +41,7 @@
         };
         $.ajax({
                 data:  parametros,
-                url:   'guardar.php',
+                url:   'http://173.208.190.66/~cony/guardar.php',
                 type:  'post',
                 beforeSend: function () {
                         $("#res").html("Procesando, espere por favor...");
@@ -51,7 +51,7 @@
                 }
         });
 		
-		window.setTimeout('location.reload()', 1000); //reloads after 3 seconds
+		window.setTimeout('location.reload()', 3000); //reloads after 3 seconds
 }
 
         // onError Callback receives a PositionError object
@@ -64,7 +64,7 @@
     </script>
 </head>
 <body>
-<p id="geolocation">Watching geolocation...</p>
+<p id="geolocation">Buscando geolocalizacion...</p>
 <p>&nbsp;</p>
 
 <div id="res"></div>
